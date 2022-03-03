@@ -1,138 +1,166 @@
-/* General setup */
-html,
-body {
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,700;1,700&family=Roboto+Mono:wght@200&family=Roboto:wght@300&display=swap");
+
+/* ----------------------------- */
+/*        Custom properties      */
+/* ----------------------------- */
+:root {
+  /* Colors */
+  --clr-drk: 215, 28%, 17%;
+  --clr-gry: 220, 13%, 91%;
+  --clr-wht: 90, 17%, 98%;
+  --clr-blu: 217, 91%, 59%;
+
+  /* Font Sizes */
+  --fs-500: 48px;
+  --fs-400: 36px;
+  --fs-300: 24px;
+  --fs-200: 18px;
+  --fs-100: 16px;
+
+  /* Font families */
+  --ff-exo-serif: "Exo", sans-serif;
+  --ff-robot-serif: "Roboto", sans-serif;
+  --ff-robot-mono: "Roboto Mono", monospace;
+}
+
+/* ----------------------------- */
+/*        Box sizing             */
+/* ----------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ----------------------------- */
+/*        Reset Margins          */
+/* ----------------------------- */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
   margin: 0;
-  padding: 0;
 }
 
-html {
-  font-size: 10px;
-  background-color: #a9a9a9;
-}
-
+/* ----------------------------- */
+/*        Set up the body        */
+/* ----------------------------- */
 body {
-  width: 70%;
-  margin: 0 auto;
+  font-family: var(--ff-robot-serif);
+  font-size: var(--fs-100);
+  color: hsl(var(--clr-drk));
+  background-color: hsl(var(--clr-wht));
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* ------------------------------- */
+/* make images easier to work with */
+/* ------------------------------- */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ----------------------------- */
+/*        Utility classes        */
+/* ----------------------------- */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.contianer {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+/* color */
+.bg-dark {
+  background-color: hsl(var(--clr-drk));
+}
+.bg-white {
+  background-color: hsl(var(--clr-wht));
+}
+.bg-blue {
+  background-color: hsl(var(--clr-blu));
+}
+.bg-gray {
+  background-color: hsl(var(--clr-gry));
+}
+
+.text-dark {
+  color: hsl(var(--clr-drk));
+}
+.text-white {
+  color: hsl(var(--clr-wht));
+}
+.text-blue {
+  color: hsl(var(--clr-blu));
+}
+.text-gray {
+  color: hsl(var(--clr-gry));
 }
 
 /* typography */
-h1,
-h2,
-h3 {
-  font-family: "Sonsie One", cursive, sans-serif;
-  color: #2a2a2a;
+.ff-exo-srf {
+  font-family: var(--ff-exo-serif);
+}
+.ff-robot-srf {
+  font-family: var(--ff-robot-serif);
+}
+.ff-robot-mono {
+  font-family: var(--ff-robot-mono);
 }
 
-p,
-input,
-li {
-  font-family: "Open Sans Condensed", sans-serif;
-  color: #2a2a2a;
-}
-
-h1 {
-  font-size: 4rem;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 10px black;
-}
-
-h2 {
-  font-size: 3rem;
-  text-align: center;
-}
-
-h3 {
-  font-size: 2.2rem;
-}
-
-p,
-li {
-  font-size: 1.6rem;
-  line-height: 1.5;
-}
-
-/* Header Layout */
-nav,
-article,
-aside,
-footer {
-  background-color: white;
-  padding: 1%;
-}
-
-nav {
-  height: 50px;
-  background-color: #ff80ff;
-  display: flex;
-  margin-bottom: 10px;
-}
-
-nav ul {
-  padding: 0;
-  list-style: none;
-  flex: 2;
-  display: flex;
-}
-
-nav li {
-  display: inline;
-  text-align: center;
-  flex: 1;
-}
-
-nav a {
-  display: inline-block;
-  font-size: 2rem;
+.uppercase {
   text-transform: uppercase;
-  text-decoration: none;
-  color: black;
 }
 
-nav form {
-  flex: 1;
-  display: flex;
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+.fs-100 {
+  font-size: var(--fs-100);
+}
+
+/* ----------------------------- */
+/*       Elements classes        */
+/* ----------------------------- */
+.header-wrapper {
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* .nav-bar {
   align-items: center;
-  height: 100%;
-  padding: 0 2em;
+  justify-content: space-around;
+} */
+
+.nav-link {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: background-color 700ms, border-radius 600ms;
 }
 
-input {
-  font-size: 1.6rem;
-  height: 32px;
-}
-
-input[type="search"] {
-  flex: 3;
-}
-
-input[type="submit"] {
-  flex: 1;
-  margin-left: 1rem;
-  background: #333;
-  border: 0;
-  color: white;
-}
-
-/* main Layout */
-main {
-  display: flex;
-}
-
-article {
-  flex: 4;
-}
-
-aside {
-  flex: 1;
-  margin-left: 10px;
-  background-color: #ff80ff;
-}
-
-aside li {
-  padding-bottom: 10px;
-}
-
-footer {
-  margin-top: 10px;
+.nav-link:hover {
+  border-radius: 25px;
+  background-color: hsl(var(--clr-gry));
+  color: hsl(var(--clr-drk));
 }
