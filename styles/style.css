@@ -78,7 +78,7 @@ img {
 .contianer {
   padding-inline: 2em;
   margin-inline: auto;
-  max-width: 80rem;
+  max-width: 100vw;
 }
 
 /* color */
@@ -163,4 +163,49 @@ img {
   border-radius: 25px;
   background-color: hsl(var(--clr-gry));
   color: hsl(var(--clr-drk));
+}
+
+.row {
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.column {
+  width: 450px;
+  padding: 50px 10px;
+}
+
+.column strong {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+
+.cta-button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 10px auto;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: hsl(var(--clr-wht));
+  color: hsl(var(--clr-blu));
+}
+
+.qoute-section {
+  justify-content: center;
+}
+
+.qoute {
+  width: 800px;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.qoute figcaption {
+  align-self: flex-end;
 }
