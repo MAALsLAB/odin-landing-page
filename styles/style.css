@@ -172,6 +172,9 @@ img {
 }
 
 .column {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   width: 450px;
   padding: 50px 10px;
 }
@@ -198,6 +201,8 @@ img {
 
 .qoute-section {
   justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .qoute {
@@ -208,4 +213,65 @@ img {
 
 .qoute figcaption {
   align-self: flex-end;
+}
+
+footer {
+  padding: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 60px;
+  border-radius: 24px;
+}
+
+.cta-section a {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  border: 3px solid hsl(var(--clr-wht));
+  padding: 10px 30px;
+  border-radius: 10px;
+  transition: background-color 700ms, border-radius 600ms;
+}
+
+.cta-section a:hover {
+  color: hsl(var(--clr-blu));
+  background-color: hsl(var(--clr-wht));
+  border-radius: 50px;
+}
+
+.cards-section {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.cards {
+  margin-top: 30px;
+}
+
+.card {
+  flex: 1 200px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card div {
+  width: 200px;
+  height: 200px;
+  /* border: 6px solid hsl(var(--clr-blu)); */
+  border-radius: 24px;
+  font-weight: 600;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.card img {
+  border-radius: 10px;
 }
