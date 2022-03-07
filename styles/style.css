@@ -144,7 +144,9 @@ img {
 /* ----------------------------- */
 .header-wrapper {
   justify-content: space-between;
-  padding: 10px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* .nav-bar {
